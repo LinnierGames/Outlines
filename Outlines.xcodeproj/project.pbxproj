@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E92E0F1E1FBA88A100CA55DD /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F1D1FBA88A100CA55DD /* Projects.swift */; };
+		E92E0F201FBA890100CA55DD /* Hierarchies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F1F1FBA890100CA55DD /* Hierarchies.swift */; };
+		E92E0F221FBA8A0200CA55DD /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F211FBA8A0200CA55DD /* Groups.swift */; };
+		E92E0F241FBA8A1300CA55DD /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F231FBA8A1300CA55DD /* Tasks.swift */; };
 		E9392CA41FB6804700171F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CA31FB6804700171F5B /* AppDelegate.swift */; };
 		E9392CA61FB6804700171F5B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CA51FB6804700171F5B /* FirstViewController.swift */; };
 		E9392CA81FB6804700171F5B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CA71FB6804700171F5B /* SecondViewController.swift */; };
@@ -15,6 +19,7 @@
 		E9392CB01FB6804700171F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9392CAE1FB6804700171F5B /* LaunchScreen.storyboard */; };
 		E9392CBB1FB6804800171F5B /* OutlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CBA1FB6804800171F5B /* OutlinesTests.swift */; };
 		E9392CC61FB6804800171F5B /* OutlinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CC51FB6804800171F5B /* OutlinesUITests.swift */; };
+		E94E698A1FB7AE9A0049D965 /* Outlines.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E94E69881FB7AE9A0049D965 /* Outlines.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E92E0F1D1FBA88A100CA55DD /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
+		E92E0F1F1FBA890100CA55DD /* Hierarchies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hierarchies.swift; sourceTree = "<group>"; };
+		E92E0F211FBA8A0200CA55DD /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		E92E0F231FBA8A1300CA55DD /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		E9392CA01FB6804700171F5B /* Outlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outlines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9392CA31FB6804700171F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9392CA51FB6804700171F5B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +58,7 @@
 		E9392CC11FB6804800171F5B /* OutlinesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutlinesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9392CC51FB6804800171F5B /* OutlinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinesUITests.swift; sourceTree = "<group>"; };
 		E9392CC71FB6804800171F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E94E69891FB7AE9A0049D965 /* Outlines.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Outlines.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +113,7 @@
 				E9392CA51FB6804700171F5B /* FirstViewController.swift */,
 				E9392CA71FB6804700171F5B /* SecondViewController.swift */,
 				E9392CA91FB6804700171F5B /* Main.storyboard */,
-				E9392CAC1FB6804700171F5B /* Assets.xcassets */,
-				E9392CAE1FB6804700171F5B /* LaunchScreen.storyboard */,
-				E9392CB11FB6804700171F5B /* Info.plist */,
+				E9B727BF1FBA87BE002BD4DA /* Supporting Files */,
 			);
 			path = Outlines;
 			sourceTree = "<group>";
@@ -126,6 +134,21 @@
 				E9392CC71FB6804800171F5B /* Info.plist */,
 			);
 			path = OutlinesUITests;
+			sourceTree = "<group>";
+		};
+		E9B727BF1FBA87BE002BD4DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9392CAC1FB6804700171F5B /* Assets.xcassets */,
+				E9392CB11FB6804700171F5B /* Info.plist */,
+				E9392CAE1FB6804700171F5B /* LaunchScreen.storyboard */,
+				E94E69881FB7AE9A0049D965 /* Outlines.xcdatamodeld */,
+				E92E0F1D1FBA88A100CA55DD /* Projects.swift */,
+				E92E0F1F1FBA890100CA55DD /* Hierarchies.swift */,
+				E92E0F211FBA8A0200CA55DD /* Groups.swift */,
+				E92E0F231FBA8A1300CA55DD /* Tasks.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E94E698A1FB7AE9A0049D965 /* Outlines.xcdatamodeld in Sources */,
+				E92E0F201FBA890100CA55DD /* Hierarchies.swift in Sources */,
 				E9392CA81FB6804700171F5B /* SecondViewController.swift in Sources */,
+				E92E0F1E1FBA88A100CA55DD /* Projects.swift in Sources */,
+				E92E0F241FBA8A1300CA55DD /* Tasks.swift in Sources */,
 				E9392CA41FB6804700171F5B /* AppDelegate.swift in Sources */,
 				E9392CA61FB6804700171F5B /* FirstViewController.swift in Sources */,
+				E92E0F221FBA8A0200CA55DD /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +590,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E94E69881FB7AE9A0049D965 /* Outlines.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E94E69891FB7AE9A0049D965 /* Outlines.xcdatamodel */,
+			);
+			currentVersion = E94E69891FB7AE9A0049D965 /* Outlines.xcdatamodel */;
+			path = Outlines.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E9392C981FB6804700171F5B /* Project object */;
 }
