@@ -11,8 +11,11 @@
 		E92E0F201FBA890100CA55DD /* Hierarchies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F1F1FBA890100CA55DD /* Hierarchies.swift */; };
 		E92E0F221FBA8A0200CA55DD /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F211FBA8A0200CA55DD /* Groups.swift */; };
 		E92E0F241FBA8A1300CA55DD /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F231FBA8A1300CA55DD /* Tasks.swift */; };
+		E92E0F261FBA8CDD00CA55DD /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F251FBA8CDD00CA55DD /* ProjectViewController.swift */; };
+		E92E0F281FBA8DA000CA55DD /* FetchedResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F271FBA8DA000CA55DD /* FetchedResultsTableViewController.swift */; };
+		E92E0F2A1FBA8F1E00CA55DD /* UniversalExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F291FBA8F1E00CA55DD /* UniversalExtentions.swift */; };
+		E92E0F2C1FBA9C0B00CA55DD /* OutlineDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92E0F2B1FBA9C0B00CA55DD /* OutlineDetailTableViewController.swift */; };
 		E9392CA41FB6804700171F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CA31FB6804700171F5B /* AppDelegate.swift */; };
-		E9392CA61FB6804700171F5B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CA51FB6804700171F5B /* FirstViewController.swift */; };
 		E9392CA81FB6804700171F5B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CA71FB6804700171F5B /* SecondViewController.swift */; };
 		E9392CAB1FB6804700171F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9392CA91FB6804700171F5B /* Main.storyboard */; };
 		E9392CAD1FB6804700171F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9392CAC1FB6804700171F5B /* Assets.xcassets */; };
@@ -44,9 +47,12 @@
 		E92E0F1F1FBA890100CA55DD /* Hierarchies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hierarchies.swift; sourceTree = "<group>"; };
 		E92E0F211FBA8A0200CA55DD /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		E92E0F231FBA8A1300CA55DD /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		E92E0F251FBA8CDD00CA55DD /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		E92E0F271FBA8DA000CA55DD /* FetchedResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FetchedResultsTableViewController.swift; path = "../../../../Swift Source Files/FetchedResultsTableViewController.swift"; sourceTree = "<group>"; };
+		E92E0F291FBA8F1E00CA55DD /* UniversalExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UniversalExtentions.swift; path = "../../../../Swift Source Files/UniversalExtentions.swift"; sourceTree = "<group>"; };
+		E92E0F2B1FBA9C0B00CA55DD /* OutlineDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlineDetailTableViewController.swift; sourceTree = "<group>"; };
 		E9392CA01FB6804700171F5B /* Outlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outlines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9392CA31FB6804700171F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9392CA51FB6804700171F5B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E9392CA71FB6804700171F5B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E9392CAA1FB6804700171F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9392CAC1FB6804700171F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,7 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				E9392CA31FB6804700171F5B /* AppDelegate.swift */,
-				E9392CA51FB6804700171F5B /* FirstViewController.swift */,
+				E92E0F251FBA8CDD00CA55DD /* ProjectViewController.swift */,
+				E92E0F2B1FBA9C0B00CA55DD /* OutlineDetailTableViewController.swift */,
 				E9392CA71FB6804700171F5B /* SecondViewController.swift */,
 				E9392CA91FB6804700171F5B /* Main.storyboard */,
 				E9B727BF1FBA87BE002BD4DA /* Supporting Files */,
@@ -139,6 +146,8 @@
 		E9B727BF1FBA87BE002BD4DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E92E0F271FBA8DA000CA55DD /* FetchedResultsTableViewController.swift */,
+				E92E0F291FBA8F1E00CA55DD /* UniversalExtentions.swift */,
 				E9392CAC1FB6804700171F5B /* Assets.xcassets */,
 				E9392CB11FB6804700171F5B /* Info.plist */,
 				E9392CAE1FB6804700171F5B /* LaunchScreen.storyboard */,
@@ -286,13 +295,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E94E698A1FB7AE9A0049D965 /* Outlines.xcdatamodeld in Sources */,
+				E92E0F281FBA8DA000CA55DD /* FetchedResultsTableViewController.swift in Sources */,
+				E92E0F2A1FBA8F1E00CA55DD /* UniversalExtentions.swift in Sources */,
 				E92E0F201FBA890100CA55DD /* Hierarchies.swift in Sources */,
 				E9392CA81FB6804700171F5B /* SecondViewController.swift in Sources */,
 				E92E0F1E1FBA88A100CA55DD /* Projects.swift in Sources */,
+				E92E0F261FBA8CDD00CA55DD /* ProjectViewController.swift in Sources */,
 				E92E0F241FBA8A1300CA55DD /* Tasks.swift in Sources */,
 				E9392CA41FB6804700171F5B /* AppDelegate.swift in Sources */,
-				E9392CA61FB6804700171F5B /* FirstViewController.swift in Sources */,
 				E92E0F221FBA8A0200CA55DD /* Groups.swift in Sources */,
+				E92E0F2C1FBA9C0B00CA55DD /* OutlineDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

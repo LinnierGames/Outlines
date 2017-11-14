@@ -12,22 +12,40 @@ import CoreData
 extension Hierarchy {
     
     @discardableResult
-    convenience init(info: HierarchyInfo, parent: Hierarchy?, `in` context: NSManagedObjectContext) {
+    convenience init(info: HierarchyInfo, project: Project, parent: Hierarchy?, `in` context: NSManagedObjectContext) {
         self.init(context: context)
         
         self.info = info
         self.parent = parent
+        self.project = project
+    }
+}
+
+extension NSFetchedResultsController {
+    @objc func hierarchy(at indexPath: IndexPath) -> Hierarchy {
+        return object(at: indexPath) as! Hierarchy
     }
 }
 
 extension HierarchyInfo {
     
     @discardableResult
-    convenience init(title: String = "Untitled", parent: Hierarchy?, `in` context: NSManagedObjectContext) {
+    convenience init(title: String = "Untitled", project: Project, parent: Hierarchy?, `in` context: NSManagedObjectContext) {
         self.init(context: context)
         
         self.title = title
         
-        Hierarchy(info: self, parent: parent, in: context)
+        Hierarchy(info: self, project: project, parent: parent, in: context)
+    }
+    
+    var depthLevel: Int {
+        var level = 0
+        var currentLevel = self.hierarchy
+        while (hierarchy != nil) {
+            currentLevel = currentLevel!.parent
+            level += 1
+        }
+        
+        return level
     }
 }
