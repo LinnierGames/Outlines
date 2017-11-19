@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G1036" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Groups" representedClassName="Group" parentEntity="HierarchyInfos" syncable="YES" codeGenerationType="class"/>
     <entity name="Hierarchies" representedClassName="Hierarchy" syncable="YES" codeGenerationType="class">
         <relationship name="children" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Hierarchies" inverseName="parent" inverseEntity="Hierarchies" syncable="YES"/>
@@ -15,12 +15,12 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Hierarchies" inverseName="project" inverseEntity="Hierarchies" syncable="YES"/>
     </entity>
-    <entity name="Tasks" representedClassName="Task" parentEntity="HierarchyInfos" syncable="YES" codeGenerationType="class"/>
+    <entity name="Tasks" representedClassName="Task" parentEntity="Groups" syncable="YES" codeGenerationType="class"/>
     <elements>
         <element name="Groups" positionX="-36" positionY="36" width="128" height="45"/>
         <element name="Hierarchies" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="HierarchyInfos" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="Tasks" positionX="-27" positionY="45" width="128" height="45"/>
         <element name="Projects" positionX="-18" positionY="54" width="128" height="75"/>
+        <element name="Tasks" positionX="-27" positionY="45" width="128" height="45"/>
     </elements>
 </model>

@@ -38,10 +38,23 @@ extension HierarchyInfo {
         Hierarchy(info: self, project: project, parent: parent, in: context)
     }
     
+    var children: [HierarchyInfo]? {
+        let localizedStandardSort = NSSortDescriptor(key: "info.title", ascending: true)
+        if let hierarchies = hierarchy!.children?.sortedArray(using: [localizedStandardSort]) as! [Hierarchy]? {
+            let hierarchyInfos = hierarchies.map({ (hierarchy) -> HierarchyInfo in
+                return hierarchy.info!
+            })
+            
+            return hierarchyInfos
+        } else {
+            return nil
+        }
+    }
+    
     var depthLevel: Int {
         var level = 0
         var currentLevel = self.hierarchy
-        while (hierarchy != nil) {
+        while (currentLevel != nil) {
             currentLevel = currentLevel!.parent
             level += 1
         }

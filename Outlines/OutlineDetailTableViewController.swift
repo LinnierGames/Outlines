@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class OutlineDetailTableViewController: FetchedResultsTableViewController {
+class OutlineDetailTableViewController: FetchedResultsTableViewController, UITextFieldDelegate {
     
     var project: Project!
     
@@ -17,22 +17,47 @@ class OutlineDetailTableViewController: FetchedResultsTableViewController {
     
     // MARK: - RETURN VALUES
     
+    private var tableInfo: [Group]? {
+        var hierarichalGroups = [Group]()
+        if let topGroupHierarchies = fetchedResultsController.fetchedObjects as! [Hierarchy]? {
+            for hierarchy in topGroupHierarchies {
+                let group = hierarchy.group
+                hierarichalGroups += group.flatMap
+            }
+        }
+        
+        return hierarichalGroups
+    }
+    
     // MARK: Table View Data Source
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableInfo?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, indentationLevelForRowAt indexPath: IndexPath) -> Int {
+        let row = tableInfo![indexPath.row]
         
-        let hierarchy = fetchedResultsController.hierarchy(at: indexPath)
-        switch hierarchy.info! {
+        return row.depthLevel
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        
+        let group = tableInfo![indexPath.row]
+        switch group {
         case is Task:
-            let task = hierarchy.info! as! Task
-            cell.textLabel!.text = task.title
-        case is Group:
-            let group = hierarchy.info! as! Group
-            cell.textLabel!.text = group.title
+            let task = group as! Task
+            cell.textFieldDoubleTap.text = task.title
         default:
-            break
+            cell.textFieldDoubleTap.text = group.title
         }
+        
+        cell.textFieldDoubleTap.delegate = self
         
         return cell
     }
@@ -41,11 +66,7 @@ class OutlineDetailTableViewController: FetchedResultsTableViewController {
     
     private func configureFetch() {
         let fetch: NSFetchRequest<Hierarchy> = Hierarchy.fetchRequest()
-        if let currentHierarchy = hierarchy {
-            fetch.predicate = NSPredicate(format: "project = %@ AND parent = %@", project, currentHierarchy)
-        } else {
-            fetch.predicate = NSPredicate(format: "project = %@ AND parent = nil", project)
-        }
+        fetch.predicate = NSPredicate(format: "project = %@ AND parent = nil", project)
         fetch.sortDescriptors = [NSSortDescriptor(key: "info.title", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))]
         fetchedResultsController = NSFetchedResultsController<NSManagedObject>(
             fetchRequest: fetch as! NSFetchRequest<NSManagedObject>,
@@ -58,17 +79,14 @@ class OutlineDetailTableViewController: FetchedResultsTableViewController {
         if let identifier = segue.identifier {
             switch identifier {
             case "show":
-                let vc = segue.destination as! OutlineDetailTableViewController
-                let row = fetchedResultsController.hierarchy(at: tableView.indexPath(for: sender as! UITableViewCell)!)
-                vc.hierarchy = row
-                vc.project = project // TODO : remove passing project to every view controller
+                break
             default:
                 break
             }
         }
     }
     
-    // MARK: - IBACTIONS
+    // MARK: - IBACTION
     
     @IBAction func pressAdd(_ sender: Any) {
         let alertGroup = UITextAlertController(title: "New Group", message: "enter a title")
@@ -88,14 +106,15 @@ class OutlineDetailTableViewController: FetchedResultsTableViewController {
         configureFetch()
         
         self.title = hierarchy?.info!.title ?? project.title
+        self.navigationItem.rightBarButtonItem = editButtonItem
+        self.tableView.estimatedRowHeight = 44
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         
         saveHandler = AppDelegate.sharedInstance.saveContext
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        self.navigationItem.rightBarButtonItem = editButtonItem
     }
 
 }

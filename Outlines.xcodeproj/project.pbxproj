@@ -23,6 +23,7 @@
 		E9392CBB1FB6804800171F5B /* OutlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CBA1FB6804800171F5B /* OutlinesTests.swift */; };
 		E9392CC61FB6804800171F5B /* OutlinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9392CC51FB6804800171F5B /* OutlinesUITests.swift */; };
 		E94E698A1FB7AE9A0049D965 /* Outlines.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E94E69881FB7AE9A0049D965 /* Outlines.xcdatamodeld */; };
+		E9510D471FC124EF009DFA2D /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9510D461FC124EF009DFA2D /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E9392CC51FB6804800171F5B /* OutlinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinesUITests.swift; sourceTree = "<group>"; };
 		E9392CC71FB6804800171F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94E69891FB7AE9A0049D965 /* Outlines.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Outlines.xcdatamodel; sourceTree = "<group>"; };
+		E9510D461FC124EF009DFA2D /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		E9B727BF1FBA87BE002BD4DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9510D461FC124EF009DFA2D /* CustomTableViewCell.swift */,
 				E92E0F271FBA8DA000CA55DD /* FetchedResultsTableViewController.swift */,
 				E92E0F291FBA8F1E00CA55DD /* UniversalExtentions.swift */,
 				E9392CAC1FB6804700171F5B /* Assets.xcassets */,
@@ -300,6 +303,7 @@
 				E92E0F201FBA890100CA55DD /* Hierarchies.swift in Sources */,
 				E9392CA81FB6804700171F5B /* SecondViewController.swift in Sources */,
 				E92E0F1E1FBA88A100CA55DD /* Projects.swift in Sources */,
+				E9510D471FC124EF009DFA2D /* CustomTableViewCell.swift in Sources */,
 				E92E0F261FBA8CDD00CA55DD /* ProjectViewController.swift in Sources */,
 				E92E0F241FBA8A1300CA55DD /* Tasks.swift in Sources */,
 				E9392CA41FB6804700171F5B /* AppDelegate.swift in Sources */,
